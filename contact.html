@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="th" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Kittisak</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Prompt', sans-serif; }
+
+    @keyframes float-slow {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50% { transform: translate(30px, -40px) scale(1.1); }
+    }
+    .animate-blob-1 { animation: float-slow 9s infinite ease-in-out; }
+
+    .bg-grid-pattern {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .glass-nav {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Form Input Focus Effects */
+    .form-input {
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      transition: all 0.3s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #22d3ee;
+      box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between overflow-x-hidden selection:bg-cyan-500 selection:text-slate-950 relative">
+
+  <!-- Ambient Animated Glowing Blobs -->
+  <div class="fixed top-[15%] left-[20%] w-[450px] h-[450px] bg-cyan-500/20 rounded-full blur-[130px] pointer-events-none z-0 animate-blob-1"></div>
+  <div class="fixed bottom-[20%] right-[20%] w-[480px] h-[480px] bg-indigo-500/20 rounded-full blur-[140px] pointer-events-none z-0 animate-blob-1" style="animation-delay: 3s;"></div>
+
+  <!-- Tech Grid Background -->
+  <div class="fixed inset-0 bg-grid-pattern opacity-40 pointer-events-none z-0"></div>
+
+  <!-- Navigation Bar -->
+  <nav class="glass-nav border-b border-slate-800/80 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-black tracking-wider bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+         Portfolio<span class="text-cyan-400">.</span>
+      </a>
+      <ul class="flex space-x-8 text-sm md:text-base font-medium">
+        <li><a href="index.html" class="text-slate-400 hover:text-cyan-300 transition-colors">Home</a></li>
+        <li><a href="education.html" class="text-slate-400 hover:text-cyan-300 transition-colors">Education</a></li>
+        <li><a href="portfolio.html" class="text-slate-400 hover:text-cyan-300 transition-colors">Portfolio</a></li>
+        <li><a href="activity.html" class="text-slate-400 hover:text-cyan-300 transition-colors">Activity</a></li>
+        <li><a href="contact.html" class="text-cyan-400 font-semibold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-cyan-400 after:shadow-[0_0_8px_#22d3ee]">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Contact Section -->
+  <main class="max-w-5xl mx-auto px-6 py-12 flex-grow w-full relative z-10">
+    <section class="mb-10 text-center space-y-2">
+      <h1 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-500">
+        CONTACT ME
+      </h1>
+    </section>
+
+    <!-- Top 4 Info Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+      
+      <!-- Address -->
+      <div class="glass-card p-6 rounded-2xl flex items-center gap-5 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl flex-shrink-0 border border-cyan-400/30">
+          📍
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider">Address</h3>
+          <p class="text-slate-200 text-sm md:text-base font-medium mt-0.5">ตำบล ขามเรียง อำเภอกันทรวิชัย มหาสารคาม 44150</p>
+        </div>
+      </div>
+
+      <!-- Call Me -->
+      <div class="glass-card p-6 rounded-2xl flex items-center gap-5 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl flex-shrink-0 border border-cyan-400/30">
+          📞
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider">Call Me</h3>
+          <p class="text-slate-200 text-sm md:text-base font-medium mt-0.5">095-317-5429</p>
+        </div>
+      </div>
+
+      <!-- Email Me -->
+      <div class="glass-card p-6 rounded-2xl flex items-center gap-5 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl flex-shrink-0 border border-cyan-400/30">
+          ✉️
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider">Email Me</h3>
+          <p class="text-slate-200 text-sm md:text-base font-medium mt-0.5">67011213111@msu.ac.th</p>
+        </div>
+      </div>
+
+      <!-- Social Profiles (Facebook & Instagram Only) -->
+      <div class="glass-card p-6 rounded-2xl flex items-center gap-5 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300">
+        <div class="w-12 h-12 rounded-2xl bg-cyan-500/20 text-cyan-300 flex items-center justify-center text-xl flex-shrink-0 border border-cyan-400/30">
+          🌐
+        </div>
+        <div>
+          <h3 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-1">Social Profiles</h3>
+          <div class="flex items-center gap-3">
+            <!-- Facebook Link -->
+            <a href="https://www.facebook.com/kittisak.wanla.2024" target="_blank" title="Facebook" class="w-9 h-9 rounded-xl bg-slate-800/90 hover:bg-cyan-500/20 border border-slate-700/80 hover:border-cyan-400/60 p-1.5 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md">
+              <img src="images/facebook logo.png" alt="Facebook" class="w-full h-full object-contain">
+            </a>
+            <!-- Instagram Link -->
+            <a href="https://www.instagram.com/gxyyyz_/" target="_blank" title="Instagram" class="w-9 h-9 rounded-xl bg-slate-800/90 hover:bg-cyan-500/20 border border-slate-700/80 hover:border-cyan-400/60 p-1.5 flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-md">
+              <img src="images/Instagram logo.png" alt="Instagram" class="w-full h-full object-contain">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="glass-card p-8 md:p-10 rounded-2xl border-slate-800 shadow-2xl">
+      <form action="#" method="POST" class="space-y-6" onsubmit="event.preventDefault(); alert('ส่งข้อความเรียบร้อยแล้วครับ!');">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-3.5 rounded-xl form-input text-sm placeholder-slate-500">
+          </div>
+          <div>
+            <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3.5 rounded-xl form-input text-sm placeholder-slate-500">
+          </div>
+        </div>
+
+        <div>
+          <input type="text" name="subject" placeholder="Subject" required class="w-full px-4 py-3.5 rounded-xl form-input text-sm placeholder-slate-500">
+        </div>
+
+        <div>
+          <textarea name="message" rows="5" placeholder="Message" required class="w-full px-4 py-3.5 rounded-xl form-input text-sm placeholder-slate-500 resize-none"></textarea>
+        </div>
+
+        <div class="text-center pt-2">
+          <button type="submit" class="px-10 py-3.5 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-extrabold rounded-xl shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.7)] hover:-translate-y-1 transition-all duration-300 cursor-pointer">
+            Send Message
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="glass-nav border-t border-slate-800/80 py-6 text-center text-slate-400 text-sm relative z-10">
+    <div class="max-w-6xl mx-auto px-6">
+      <p>© 2026 Kittisak. All rights reserved.</p>
+      <p class="text-xs text-slate-500 mt-1">Faculty of Informatics, Mahasarakham University</p>
+    </div>
+  </footer>
+
+</body>
+</html>
